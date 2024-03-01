@@ -11,8 +11,8 @@ if (cluster.isMaster) {
   for (let i = 0; i < cpuCount; i++) {
     cluster.fork();
   }
-} else {
+}else {
   app.listen(port, () => {
-    console.log("listening on port 3000");
+    console.log(`http://localhost:${port}/${cluster.worker?.id}`)
   });
 }

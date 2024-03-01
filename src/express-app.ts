@@ -13,7 +13,7 @@ app.get("/", (req, res) => {
 function expensiveOperation() {
   const startTime = new Date().getTime();
   let ctr = 0;
-  for (let i = 0; i < 1000000000000; i++) {
+  for (let i = 0; i < 1000000; i++) {
     ctr++;
   }
   console.log(
